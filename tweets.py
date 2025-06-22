@@ -46,7 +46,7 @@ if st.button("Analyze"):
                     scores = softmax(output.logits.detach().numpy()[0])
                     sentiment = labels[scores.argmax()]
                     st.write(f"**Tweet:** {tweet.text}")
-                    st.write(f"**Sentiment:** "f"{':red_circle:' if sentiment == 'Negative' else ':large_blue_circle:' if sentiment == 'Neutral' else ':green_circle:'} "f"{sentiment}")
+                    st.write(f"**Sentiment:** "f"{sentiment}")
                     st.markdown("---")
             else:
                 st.info("No tweets found for this query.")
