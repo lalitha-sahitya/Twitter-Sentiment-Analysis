@@ -50,5 +50,7 @@ if st.button("Analyze"):
                     st.markdown("---")
             else:
                 st.info("No tweets found for this query.")
+        except tweepy.TooManyRequests:
+            st.warning("Twitter API rate limit exceeded. Please try again later.")
         except Exception as e:
             st.error(f"Error fetching or processing tweets: {e}")
