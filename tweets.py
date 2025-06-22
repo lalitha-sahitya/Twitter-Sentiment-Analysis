@@ -2,15 +2,12 @@ import streamlit as st
 from transformers import logging, AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
 import tweepy
-from dotenv import load_dotenv
 import os
 
 logging.set_verbosity_error()
 
-env_path = 'C:/Users/lalit/OneDrive/Desktop/twitter_sentiment_analysis/twitter.env.txt'
-load_dotenv(env_path)
 
-client = tweepy.Client(bearer_token=os.getenv('BEARER_TOKEN'))
+client = tweepy.Client(bearer_token=st.secrets["BEARER_TOKEN"])
 
 roberta = 'cardiffnlp/twitter-roberta-base-sentiment'
 tokenizer = AutoTokenizer.from_pretrained(roberta)
