@@ -1,0 +1,12 @@
+venv/
+env/
+.venv/
+
+*.env*
+twitter.env.txt
+
+__pycache__/
+*.pyc
+
+.DS_Store
+Thumbs.db
