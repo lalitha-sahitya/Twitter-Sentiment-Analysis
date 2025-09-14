@@ -7,3 +7,4 @@
 - Displays each tweet with its sentiment.
 
 Open the site here: [Twitter Sentiment Analysis App](https://twitter-sentiment-analysis-wr9s9dchbt7zy4nkeadtas.streamlit.app)
+ 
